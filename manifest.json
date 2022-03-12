@@ -1,0 +1,20 @@
+{
+  "short_name": "React TODO",
+  "name": "TODO app using React framework",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon.png",
+      "type": "image/png",
+      "sizes": "64x64"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#487f62",
+  "background_color": "#fdf9f0"
+}
