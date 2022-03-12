@@ -1,17 +1,60 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React, { useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+import Header from "./components/header";
+import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
+import Footer from "./components/footer";
+import "./styles/index.css";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+const LOCAL_STORAGE_KEY = "react-todo-todos";
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+export default function App() {
+  const [todos, setTodos] = useState([]);
+
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if (storedTodos) setTodos(storedTodos);
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
+  }, [todos]);
+
+  function addTodo(todo) {
+    setTodos([todo, ...todos]);
+  }
+
+  function removeItem(id) {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+
+  function toggleComplete(id) {
+    setTodos(
+      todos.map((todo) => {
+        if (todo.id === id) {
+          return { ...todo, completed: !todo.completed };
+        }
+        return todo;
+      })
+    );
+  }
+
+  return (
+    <>
+      <Header />
+      <div id="todo-app">
+        <h1>React TODO</h1>
+        <TodoForm addTodo={addTodo} />
+        <TodoList
+          todos={todos}
+          toggleComplete={toggleComplete}
+          removeItem={removeItem}
+        />
+        <h4>*Click to expand long TODOs</h4>
+      </div>
+      <Footer />
+    </>
+  );
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));
