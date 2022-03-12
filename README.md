@@ -30,7 +30,7 @@ To copy and modify this project,
 3.Install dependencies, run
 
 ```bash
-  npm Install //or yarn install
+  npm Install
 ```
 
 4.Make changes
