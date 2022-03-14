@@ -9,7 +9,7 @@ Simple **React TODO** app made using **React** framework with an awesome respons
 - Save TODOs in list and displays it
 - Stores TODO list in local storage(Browser's)
 - Retains the list on Refresh and Rerun
-- Build for simple personal use
+- Built for simple personal use
 
 ## Run Locally
 
@@ -35,7 +35,7 @@ To copy and modify this project,
 
 4.Make changes
 
-3.Install dependencies, run
+5.run
 
 ```bash
   npm start //or yarn start
