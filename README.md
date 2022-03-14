@@ -1,6 +1,6 @@
 # React TODO
 
-Simple **React TODO** app made using **React** framework with an awesome responsible UI.
+Simple **React TODO** app made using **React** framework with an awesome responsive UI.
 
 ![screenshot](docs/Screenshot.png)
 
