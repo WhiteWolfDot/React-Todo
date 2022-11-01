@@ -6,7 +6,7 @@ function Footer() {
          <div id='footer-content'>
             Made with ❤ for the
             <a id='footer-logo' href='https://github.com/WhiteWolfDot'>
-               DevOps Assignment (Git workflow)
+               DevOps Assignment 1 (Git workflow)
             </a>
          </div>
       </footer>
