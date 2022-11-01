@@ -4,7 +4,7 @@ function Footer() {
    return (
       <footer>
          <div id='footer-content'>
-            Made with ❤ for the
+            Made with ❤ for
             <a id='footer-logo' href='https://github.com/WhiteWolfDot'>
                DevOps Assignment 1 (Git workflow)
             </a>
