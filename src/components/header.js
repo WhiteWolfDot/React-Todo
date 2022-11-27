@@ -5,14 +5,14 @@ function Header() {
     <header>
       <div id="header-content">
         <div id="logo">
-          <a className="links" href="https://github.com/WhiteWolfDot">
-            whitewolfdot
+          <a className="links" href="https://github.com/shinjith-dev">
+            shinjith-dev
           </a>
         </div>
         <div style={{ float: "right" }}>
           <a
             className="links"
-            href="https://github.com/WhiteWolfDot/React-Todo/issues/new"
+            href="https://github.com/shinjith-dev/React-Todo/issues/new"
           >
             Report a problem
           </a>
